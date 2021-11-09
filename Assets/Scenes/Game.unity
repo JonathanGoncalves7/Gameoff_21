@@ -32441,7 +32441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f396e1fc26178f4b9c5b636b09fa2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
 --- !u!850595691 &1180567484
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -32770,5 +32770,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1967a493242b74bbd02d55d292f6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivy: 80
+  mouseSensitivy: 130
   playerBody: {fileID: 1046155519}
