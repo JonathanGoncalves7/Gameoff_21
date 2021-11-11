@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740646, a: 1}
+  m_IndirectSpecularColor: {r: 0.08044007, g: 0.093300484, b: 0.103452556, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,6 +194,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5823320581665011222, guid: cac4412298028764d8916e2c6f58f8d9, type: 3}
   m_PrefabInstance: {fileID: 5823320581124583990}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &771704520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7981003818389350545, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
+  m_PrefabInstance: {fileID: 7981003819099699308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &771704521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771704520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994acb614352897458dcf77297c441e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyInteraction: 323
+  rayDistance: 5
 --- !u!1 &773634345
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &773634346
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27793,7 +27812,7 @@ Transform:
   - {fileID: 544982048}
   - {fileID: 887307293}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &887307292
 GameObject:
@@ -27813,7 +27832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &887307293
 Transform:
   m_ObjectHideFlags: 0
@@ -28024,7 +28043,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20646
+  m_Name: pb_Mesh36518
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28259,15 +28278,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597408, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_Color.b
-      value: 0.990566
+      value: 0.8773585
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597408, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_Color.g
-      value: 0.799043
+      value: 0.67923445
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597408, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_Color.r
-      value: 0.6494749
+      value: 0.5255874
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597408, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_Intensity
@@ -28387,6 +28406,10 @@ PrefabInstance:
       value: Plan
       objectReference: {fileID: 0}
     - target: {fileID: 5823320581665011241, guid: cac4412298028764d8916e2c6f58f8d9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823320581665011241, guid: cac4412298028764d8916e2c6f58f8d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -28409,7 +28432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981003818389350547, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7981003818389350547, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28474,6 +28497,10 @@ PrefabInstance:
     - target: {fileID: 7981003819444768423, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981003819444768423, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7981003819651115515, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_LocalScale.y
