@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Walk")]
     public float speed = 5f;
     public float mouseSensitivy = 130f;
-    public Transform mainCamera;
+    public Transform rootCamera;
 
     [Header("Run")]
     public KeyCode runKeyCode = KeyCode.LeftShift;
@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     CharacterController controller;
-
 
     float xRotation = 0f;
 
@@ -103,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        mainCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        rootCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
 }
