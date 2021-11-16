@@ -24,12 +24,12 @@ public class EyesManager : MonoBehaviour
         Instance = this;
     }
 
-    public bool LeftEyesIsOpen()
+    public bool LeftEyeIsOpen()
     {
         return LeftEye.GetInteger(PARAM_NAME) != (int)state.closed;
     }
 
-    public bool RightEyesIsOpen()
+    public bool RightEyeIsOpen()
     {
         return RightEye.GetInteger(PARAM_NAME) != (int)state.closed;
     }
@@ -40,55 +40,104 @@ public class EyesManager : MonoBehaviour
     }
 
 
-
-    public void ChangeStateLeftEye()
+    private void Update()
     {
-        /*
-        state currentState = LeftEyesIsOpen() ? EyesManager.state.opened : EyesManager.state.closed;
-
-
-        switch (currentState)
+        if (Input.GetKeyDown(KeyCode.Q) && Input.GetKeyDown(KeyCode.E))
         {
-            case state.opened:
 
-                if (!LeftAndRightEyesIsOpen())
-                {
-                    ChangeStateLeftAndRight();
-                    RightEye.SetInteger(PARAM_NAME, (int)state.closed);
-                    return;
-                }
+            if (!LeftAndRightEyesIsOpen())
+            {
+                ChangeStateLeftEye(state.opened);
+                ChangeStateRightEye(state.opened);
+            }
 
-                break;
+            InvertStateLeftAndRight();
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (!LeftAndRightEyesIsOpen())
+            {
+                ChangeStateRightEye(state.closed);
+                ChangeStateLeftEye(state.opened);
+                ChangeStateLeftAndRight(state.opened);
+                return;
+            }
 
-            case state.closed:
+            if (LeftEyeIsOpen() && !RightEyeIsOpen())
+            {
+                ChangeStateLeftEye(state.closed);
+                ChangeStateRightEye(state.closed);
+                ChangeStateLeftAndRight(state.closed);
+                return;
+            }
 
-                if (!RightEyesIsOpen())
-                {
-                    ChangeStateLeftAndRight();
-                    return;
-                }
+            InvertStateLeftEye();
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!LeftAndRightEyesIsOpen())
+            {
+                ChangeStateLeftEye(state.closed);
+                ChangeStateRightEye(state.opened);
+                ChangeStateLeftAndRight(state.opened);
+                return;
+            }
 
-                break;
+            if (!LeftEyeIsOpen() && RightEyeIsOpen())
+            {
+                ChangeStateLeftEye(state.closed);
+                ChangeStateRightEye(state.closed);
+                ChangeStateLeftAndRight(state.closed);
+                return;
+            }
+
+            InvertStateRightEye();
         }
 
-*/
+    }
 
-        state newState = LeftEyesIsOpen() ? state.closed : state.opened;
 
+    public void ChangeStateLeftEye(state newState)
+    {
         LeftEye.SetInteger(PARAM_NAME, (int)newState);
     }
 
-    public void ChangeStateRightEye()
+    public void ChangeStateRightEye(state newState)
     {
-        state newState = RightEyesIsOpen() ? state.closed : state.opened;
-
         RightEye.SetInteger(PARAM_NAME, (int)newState);
     }
 
-    public void ChangeStateLeftAndRight()
+    public void ChangeStateLeftAndRight(state newState)
     {
-        state newState = LeftAndRightEyesIsOpen() ? EyesManager.state.closed : EyesManager.state.opened;
-
         LeftAndRightEyes.SetInteger(PARAM_NAME, (int)newState);
+
+        if (newState == state.closed)
+        {
+
+            ChangeStateLeftEye(state.closed);
+            ChangeStateRightEye(state.closed);
+        }
     }
+
+    public void InvertStateLeftEye()
+    {
+        state newState = LeftEyeIsOpen() ? state.closed : state.opened;
+
+        ChangeStateLeftEye(newState);
+    }
+
+    public void InvertStateRightEye()
+    {
+        state newState = RightEyeIsOpen() ? state.closed : state.opened;
+
+        ChangeStateRightEye(newState);
+    }
+
+    public void InvertStateLeftAndRight()
+    {
+        state newState = LeftAndRightEyesIsOpen() ? state.closed : state.opened;
+
+        ChangeStateLeftAndRight(newState);
+    }
+
 }
