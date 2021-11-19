@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7442827771416857176, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.85
+      value: -41.4
       objectReference: {fileID: 0}
     - target: {fileID: 7442827771416857176, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7442827771416857176, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.95
+      value: -47.47
       objectReference: {fileID: 0}
     - target: {fileID: 7442827771416857176, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -177,6 +177,14 @@ PrefabInstance:
     - target: {fileID: 7442827771416857176, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938456691936448444, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
+      propertyPath: speedBase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938456691936448444, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
+      propertyPath: speedToEachOpenEye
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710273e6989869247a001d87f11a0ef6, type: 3}
@@ -886,8 +894,6 @@ MonoBehaviour:
     - {fileID: 131614182}
     - {fileID: 1118139856}
     - {fileID: 2077331998}
-  currentPuzzle: 0
-  currentObject: 0
 --- !u!1 &752737092
 GameObject:
   m_ObjectHideFlags: 0
@@ -29318,7 +29324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19838
+  m_Name: pb_Mesh21434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
