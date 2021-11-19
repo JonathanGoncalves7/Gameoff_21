@@ -16,7 +16,6 @@ public class EyesManager : MonoBehaviour
 
     const string PARAM_NAME = "Opened";
 
-
     public static EyesManager Instance;
 
     private void Awake()

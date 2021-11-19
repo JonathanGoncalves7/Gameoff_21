@@ -31,7 +31,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (interactable != null)
             {
-                if (Input.GetKey(keyInteraction))
+                if (Input.GetKeyDown(keyInteraction))
                 {
                     interactable.Interact();
                 }
