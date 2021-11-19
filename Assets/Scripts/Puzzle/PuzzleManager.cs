@@ -10,9 +10,7 @@ public class PuzzleManager : MonoBehaviour
 
     public static PuzzleManager Instance;
 
-    [SerializeField]
     int currentPuzzle = -1;
-    [SerializeField]
     int currentObject = 0;
 
     private void Awake()
