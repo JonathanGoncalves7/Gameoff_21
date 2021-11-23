@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class PuzzleInfo
 {
-    public GameObject EnemyProp;
+    public GameObject Enemy;
     public List<GameObject> PuzzleObjects;
 }

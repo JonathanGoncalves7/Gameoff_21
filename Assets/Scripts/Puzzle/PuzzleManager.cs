@@ -10,6 +10,7 @@ public class PuzzleManager : MonoBehaviour
 
     public static PuzzleManager Instance;
 
+    bool inPuzzle = false;
     int currentPuzzle = -1;
     int currentObject = 0;
 
@@ -23,25 +24,47 @@ public class PuzzleManager : MonoBehaviour
 
     private void Start()
     {
-        NextPuzzle();
+        StartPuzzles();
     }
 
     public void ChangeCurrentObjectInteraciton(bool value)
     {
         puzzleInfos[currentPuzzle].PuzzleObjects[currentObject].GetComponent<PuzzleObjectInteraction>().EnableInteraction = value;
+
+        if (currentObject == 0)
+        {
+            puzzleInfos[currentPuzzle].Enemy.GetComponent<EnemyMovement>().patrol = false;
+        }
     }
 
 
-    public void NextStepPuzzle()
+    public void NextStepPuzzle(GameObject _gameObject)
     {
+        int puzzleIndex = -1;
+        int objectIndex = -1;
+
+        for (int i = 0; i < puzzleInfos.Count; i++)
+        {
+            for (var j = 0; j < puzzleInfos[i].PuzzleObjects.Count; j++)
+            {
+                if (_gameObject.Equals(puzzleInfos[i].PuzzleObjects[j]))
+                {
+                    //  puzzleIndex = i;
+                    //  objectIndex = j;
+
+                    currentPuzzle = i;
+                    currentObject = j;
+
+                    break;
+                }
+            }
+        }
+
         ChangeCurrentObjectInteraciton(false);
 
         if (currentObject >= puzzleInfos[currentPuzzle].PuzzleObjects.Count - 1)
         {
-            if (currentPuzzle < puzzleInfos.Count - 1)
-            {
-                NextPuzzle();
-            }
+            FinishPuzzle();
 
             return;
         }
@@ -51,22 +74,21 @@ public class PuzzleManager : MonoBehaviour
         ChangeCurrentObjectInteraciton(true);
     }
 
-    private void NextPuzzle()
+    private void FinishPuzzle()
     {
-        currentPuzzle++;
-        currentObject = 0;
+        inPuzzle = false;
+    }
 
-        for (int i = 0; i < puzzleInfos[currentPuzzle].PuzzleObjects.Count; i++)
+    private void StartPuzzles()
+    {
+        for (int i = 0; i < puzzleInfos.Count; i++)
         {
-            puzzleInfos[currentPuzzle].PuzzleObjects[i].GetComponent<PuzzleObjectInteraction>().isInteraction = false;
+            for (int j = 0; j < puzzleInfos[i].PuzzleObjects.Count; j++)
+            {
+                PuzzleObjectInteraction objectInteraction = puzzleInfos[i].PuzzleObjects[j].GetComponent<PuzzleObjectInteraction>();
 
-            if (i == 0)
-            {
-                puzzleInfos[currentPuzzle].PuzzleObjects[i].GetComponent<PuzzleObjectInteraction>().EnableInteraction = true;
-            }
-            else
-            {
-                puzzleInfos[currentPuzzle].PuzzleObjects[i].GetComponent<PuzzleObjectInteraction>().EnableInteraction = false;
+                objectInteraction.isInteraction = false;
+                objectInteraction.EnableInteraction = j == 0;
             }
         }
     }

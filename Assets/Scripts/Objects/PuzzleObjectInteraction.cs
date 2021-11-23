@@ -18,7 +18,7 @@ public class PuzzleObjectInteraction : MonoBehaviour, IInteraction
         {
             Popup.Instance.ShowPopup(MessageInteraction);
 
-            PuzzleManager.Instance.NextStepPuzzle();
+            PuzzleManager.Instance.NextStepPuzzle(gameObject);
             isInteraction = true;
         }
         else
