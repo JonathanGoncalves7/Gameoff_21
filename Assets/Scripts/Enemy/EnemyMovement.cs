@@ -19,12 +19,12 @@ public class EnemyMovement : MonoBehaviour
     private float timeToNextPoint = 0f;
     private float leftTimeNextPoint = 0f;
 
-    NavMeshAgent navMesh;
+    NavMeshAgent agent;
     GameObject player;
 
     private void Awake()
     {
-        navMesh = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -60,23 +60,23 @@ public class EnemyMovement : MonoBehaviour
 
     private void FollowPlayer()
     {
-        navMesh.speed = GetSpeed();
+        agent.speed = GetSpeed();
 
         if (Vector3.Distance(transform.position, player.transform.position) > 2f)
         {
-            navMesh.isStopped = false;
-            navMesh.SetDestination(player.transform.position);
+            agent.isStopped = false;
+            agent.SetDestination(player.transform.position);
         }
         else
         {
-            navMesh.isStopped = true;
-            navMesh.SetDestination(transform.position);
+            agent.isStopped = true;
+            agent.SetDestination(transform.position);
         }
     }
 
     void Patrol()
-    {
-        if (navMesh.destination == null || Vector3.Distance(transform.position, navMesh.destination) < 1f)
+    { 
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
             leftTimeNextPoint += Time.deltaTime;
 
@@ -94,7 +94,7 @@ public class EnemyMovement : MonoBehaviour
 
                 currentPointIndex = nextPointsIndex;
                 Transform child = patrolPoints.transform.GetChild(nextPointsIndex);
-                navMesh.SetDestination(child.position);
+                agent.SetDestination(child.position);
             }
         }
     }
