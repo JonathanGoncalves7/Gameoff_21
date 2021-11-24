@@ -16,10 +16,11 @@ public class PuzzleObjectInteraction : MonoBehaviour, IInteraction
     {
         if (EnableInteraction)
         {
-            Popup.Instance.ShowPopup(MessageInteraction);
-
-            PuzzleManager.Instance.NextStepPuzzle(gameObject);
-            isInteraction = true;
+            if (PuzzleManager.Instance.NextStepPuzzle(gameObject))
+            {
+                Popup.Instance.ShowPopup(MessageInteraction);
+                isInteraction = true;
+            }
         }
         else
         {

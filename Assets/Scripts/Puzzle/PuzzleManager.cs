@@ -34,11 +34,12 @@ public class PuzzleManager : MonoBehaviour
         if (currentObject == 0)
         {
             puzzleInfos[currentPuzzle].Enemy.GetComponent<EnemyMovement>().patrol = false;
+            inPuzzle = true;
         }
     }
 
 
-    public void NextStepPuzzle(GameObject _gameObject)
+    public bool NextStepPuzzle(GameObject _gameObject)
     {
         int puzzleIndex = -1;
         int objectIndex = -1;
@@ -49,15 +50,25 @@ public class PuzzleManager : MonoBehaviour
             {
                 if (_gameObject.Equals(puzzleInfos[i].PuzzleObjects[j]))
                 {
-                    //  puzzleIndex = i;
-                    //  objectIndex = j;
-
-                    currentPuzzle = i;
-                    currentObject = j;
+                    puzzleIndex = i;
+                    objectIndex = j;
 
                     break;
                 }
             }
+        }
+
+        if (inPuzzle)
+        {
+            if (currentPuzzle != puzzleIndex)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            currentPuzzle = puzzleIndex;
+            currentObject = objectIndex;
         }
 
         ChangeCurrentObjectInteraciton(false);
@@ -66,12 +77,14 @@ public class PuzzleManager : MonoBehaviour
         {
             FinishPuzzle();
 
-            return;
+            return true;
         }
 
         currentObject++;
 
         ChangeCurrentObjectInteraciton(true);
+
+        return true;
     }
 
     private void FinishPuzzle()
