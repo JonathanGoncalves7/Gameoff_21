@@ -8,7 +8,7 @@ public class PuzzleObjectInteraction : MonoBehaviour, IInteraction
     public bool isInteraction = false;
 
     [Header("Messages")]
-    public string MessageNoInteraction = "No Interaction";
+    //    public string MessageNoInteraction = "No Interaction";
     public string MessageInteraction = "Interaction";
     public string MessageAfterInteraction = "After Interaction";
 
@@ -18,7 +18,7 @@ public class PuzzleObjectInteraction : MonoBehaviour, IInteraction
         {
             if (PuzzleManager.Instance.NextStepPuzzle(gameObject))
             {
-                Popup.Instance.ShowPopup(MessageInteraction);
+                TextPanel.Instance.ShowTextPanel(MessageInteraction);
                 isInteraction = true;
             }
         }
@@ -26,11 +26,7 @@ public class PuzzleObjectInteraction : MonoBehaviour, IInteraction
         {
             if (isInteraction)
             {
-                Popup.Instance.ShowPopup(MessageAfterInteraction);
-            }
-            else
-            {
-                Popup.Instance.ShowPopup(MessageNoInteraction);
+                TextPanel.Instance.ShowTextPanel(MessageAfterInteraction);
             }
         }
     }

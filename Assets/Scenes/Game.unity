@@ -181,7 +181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &87890256
 Transform:
@@ -312,7 +312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &131614184
@@ -553,6 +552,7 @@ GameObject:
   - component: {fileID: 194923556}
   - component: {fileID: 194923555}
   - component: {fileID: 194923557}
+  - component: {fileID: 194923558}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -587,7 +587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194923557
 MonoBehaviour:
@@ -603,6 +603,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Canvas: {fileID: 1969816738}
   PopupProp: {fileID: 7066113884659734181, guid: dbe8f925bdaa04a44ad3ecba13784985, type: 3}
+--- !u!114 &194923558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194923554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a288edf35a79c4e4d878f62db4fda6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 1969816738}
+  TextPanelProp: {fileID: 4615293670552863244, guid: 2487ba7da07ffcd439df5d8fc6ec4de6, type: 3}
 --- !u!1 &213677599
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +686,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: 'Pista '
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &254034979
@@ -1027,7 +1040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &364955773
@@ -1127,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4563620938541354878, guid: 5fecf90ce90693a4891dc9fef8464306, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4563620938541354878, guid: 5fecf90ce90693a4891dc9fef8464306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1341,7 +1353,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &530317774
@@ -1550,7 +1561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &596746400
 MonoBehaviour:
@@ -1610,7 +1621,7 @@ Transform:
   - {fileID: 565681124}
   - {fileID: 213677600}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752737092
 GameObject:
@@ -1640,7 +1651,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773634345
 GameObject:
@@ -29241,7 +29252,7 @@ Transform:
   - {fileID: 544982048}
   - {fileID: 887307293}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816569940
 GameObject:
@@ -29364,6 +29375,50 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &830317205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830317207}
+  - component: {fileID: 830317206}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &830317206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830317205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0b26d06e1128044a0d3eefcf88c2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStopGame: 0
+--- !u!4 &830317207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830317205}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.459052, y: 3.0787854, z: 33.589794}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872398026
 GameObject:
   m_ObjectHideFlags: 0
@@ -29593,7 +29648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100390219
 GameObject:
@@ -29654,7 +29709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1107253342
 AudioSource:
@@ -29861,7 +29916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &1118139858
@@ -29988,7 +30042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &1187986085
@@ -30136,7 +30189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: 'Pista '
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &1256008756
@@ -30229,7 +30281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297436105
 GameObject:
@@ -30470,7 +30522,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &1528269270
@@ -30541,7 +30592,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh46548
+  m_Name: pb_Mesh20000
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30835,7 +30886,7 @@ Transform:
   - {fileID: 1222308710}
   - {fileID: 1297436106}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782076258
 GameObject:
@@ -30901,7 +30952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909733508
 GameObject:
@@ -30937,9 +30988,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
-  MessageInteraction: Interagindo
-  MessageAfterInteraction: Ja interagiu com esse objeto
+  MessageInteraction: "Vamos todos cantar de cora\xE7\xE3o A cruz de malta \xE9 o
+    teu pend\xE3o! Tens o nome do heroico portugu\xEAs Vasco da Gama, a tua fama
+    assim se fez!"
+  MessageAfterInteraction: "A RECEITA COM MIOJO MAIS DELICIOSA E SUPER PR\xC1TICA
+    QUE J\xC1 VIU"
 --- !u!65 &1909733510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31078,7 +31131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969816738
 GameObject:
@@ -31174,7 +31227,7 @@ RectTransform:
   - {fileID: 1994723558}
   - {fileID: 525103374}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31214,7 +31267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597409, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3050002924238597409, guid: d0b0bbf66bd12c842b5f318c127d93ce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31622,7 +31675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableInteraction: 0
   isInteraction: 0
-  MessageNoInteraction: Pista
   MessageInteraction: Interagindo
   MessageAfterInteraction: Ja interagiu com esse objeto
 --- !u!65 &2077332000
@@ -31797,7 +31849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4058968175230962255, guid: 07c623a4e93e6194b9653c7802323cac, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4058968175230962255, guid: 07c623a4e93e6194b9653c7802323cac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31854,7 +31906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3972447392664314922, guid: b5567aa8bb342dc42bc4f99337852243, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3972447392664314922, guid: b5567aa8bb342dc42bc4f99337852243, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32090,7 +32142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7990783675273694907, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7990783675273694907, guid: 203b5d2eeb653d44299b803090c324ac, type: 3}
       propertyPath: m_LocalScale.y

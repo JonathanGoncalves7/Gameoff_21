@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void CheckInteractables()
     {
+        if (GameManager.Instance.isStopGame)
+            return;
+
         RaycastHit hit;
 
         Vector3 rayOrigin = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
