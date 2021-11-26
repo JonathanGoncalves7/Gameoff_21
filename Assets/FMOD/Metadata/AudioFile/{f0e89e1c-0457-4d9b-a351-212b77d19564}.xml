@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f0e89e1c-0457-4d9b-a351-212b77d19564}">
+		<property name="assetPath">
+			<value>Communications, Radio, Analog, Frequency Tuning SND42423.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8428749999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{42f84cc6-335a-4ea2-8d10-d711684bfb74}</destination>
+		</relationship>
+	</object>
+</objects>

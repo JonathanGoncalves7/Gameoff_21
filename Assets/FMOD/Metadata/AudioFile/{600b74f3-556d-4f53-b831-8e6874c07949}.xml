@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{600b74f3-556d-4f53-b831-8e6874c07949}">
+		<property name="assetPath">
+			<value>Communications, Radio, Tuning Between Stations, Static 02 SND33147 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.9984479166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{42f84cc6-335a-4ea2-8d10-d711684bfb74}</destination>
+		</relationship>
+	</object>
+</objects>
