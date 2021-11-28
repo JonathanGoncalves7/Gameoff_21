@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     private bool inRuning = false;
 
 
-    CharacterController controller;
+    Rigidbody m_Rigidbody;
 
     float xRotation = 0f;
 
 
     private void Awake()
     {
-        controller = GetComponent<CharacterController>();
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Start is called before the first frame update
@@ -91,7 +91,8 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = runSpeed;
         }
 
-        controller.Move(move * currentSpeed * Time.deltaTime);
+        m_Rigidbody.MovePosition(transform.position + move * Time.deltaTime * currentSpeed);
+
     }
 
     private void MoveCamera()
