@@ -21,15 +21,19 @@ public class PlayerMovement : MonoBehaviour
     private bool canRuning = false;
     private bool inRuning = false;
 
+    public bool playerStartGame = false;
+
 
     Rigidbody m_Rigidbody;
+    PlayerController m_PlayerController;
 
-    float xRotation = 0f;
+    public float xRotation = 0f;
 
 
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        m_PlayerController = GetComponent<PlayerController>();
     }
 
     // Start is called before the first frame update
@@ -41,6 +45,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_PlayerController.isDead)
+        {
+            return;
+        }
+
         StartRuning();
         MovePlayer();
         MoveCamera();
@@ -82,6 +91,11 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        if (x > 0 || z > 0)
+        {
+            playerStartGame = true;
+        }
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         float currentSpeed = speed;
@@ -99,6 +113,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivy * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivy * Time.deltaTime;
+
+        if (mouseX > 0 || mouseY > 0)
+        {
+            playerStartGame = true;
+        }
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

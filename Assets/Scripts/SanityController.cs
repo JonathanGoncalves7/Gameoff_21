@@ -27,6 +27,8 @@ public class SanityController : MonoBehaviour
 
     public static SanityController Instance;
 
+    private PlayerMovement m_PlayerMovement;
+
     private void Awake()
     {
         Instance = this;
@@ -40,6 +42,8 @@ public class SanityController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_PlayerMovement = GetComponent<PlayerMovement>();
+
         m_Slider.minValue = maxSanityPoints * -1;
         m_Slider.maxValue = maxSanityPoints;
     }
@@ -77,6 +81,12 @@ public class SanityController : MonoBehaviour
 
     void Update()
     {
+
+        if (!m_PlayerMovement.playerStartGame)
+        {
+            return;
+        }
+
         if (EyesManager.Instance.LeftAndRightEyesIsOpen())
         {
             UpdateCurrentFadigue(pointReduceEachSecond);

@@ -18,3 +18,153 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          : Baby_Shark (000002A79B4DF8B8)
+[LOG] SoundI::release                          :     Baby_Shark (000002A79A7EC5A8)
+[LOG] SoundI::release                          :     Baby_Shark (000002A79B4DFC18)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4DFC18 : node = 000002A7D3EEB7A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4DFC18
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3EEB8B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='La_Vie_En_Rose', format=5, channels=2, frequency=48000, lengthbytes=600000, lengthpcm=2772323, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.687073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4DFC18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4DF558
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4DF558
+[LOG] SoundI::release                          : La_Vie_En_Rose (000002A79B4DFC18)
+[LOG] SoundI::release                          :     La_Vie_En_Rose (000002A79A7E9B68)
+[LOG] SoundI::release                          :     La_Vie_En_Rose (000002A79B4DF558)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4E3DE8 : node = 000002A7D3233220
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E3DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3233330
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='My_Songs_Know_What_You_Did_In_The_Dark', format=5, channels=2, frequency=48000, lengthbytes=1552576, lengthpcm=7440509, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.537262.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E3DE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] SoundI::release                          : My_Songs_Know_What_You_Did_In_The_Dark (000002A79B4E3DE8)
+[LOG] SoundI::release                          :     My_Songs_Know_What_You_Did_In_The_Dark (000002A79A7E6DE8)
+[LOG] SoundI::release                          :     My_Songs_Know_What_You_Did_In_The_Dark (000002A79B4E1DD8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4DF8B8 : node = 000002A7D3233720
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4DF8B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3233830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Devil_In_Disguise', format=5, channels=2, frequency=48000, lengthbytes=1579072, lengthpcm=7010429, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.884827.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4DF8B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E22E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E22E8
+[LOG] SoundI::release                          : Devil_In_Disguise (000002A79B4DF8B8)
+[LOG] SoundI::release                          :     Devil_In_Disguise (000002A79A7E77A8)
+[LOG] SoundI::release                          :     Devil_In_Disguise (000002A79B4E22E8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4E1DD8 : node = 000002A7D3233C20
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3233D30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hurt', format=5, channels=2, frequency=48000, lengthbytes=2306592, lengthpcm=10667990, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.973022.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4DF3A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4DF3A8
+[LOG] SoundI::release                          : Hurt (000002A79B4E1DD8)
+[LOG] SoundI::release                          :     Hurt (000002A79A7EC0C8)
+[LOG] SoundI::release                          :     Hurt (000002A79B4DF3A8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4E0128 : node = 000002A5059C5ED0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E0128
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A5059C5FE0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='La_Vie_En_Rose', format=5, channels=2, frequency=48000, lengthbytes=600000, lengthpcm=2772323, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.687073.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E0128
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E1DD8
+[LOG] SoundI::release                          : La_Vie_En_Rose (000002A79B4E0128)
+[LOG] SoundI::release                          :     La_Vie_En_Rose (000002A6DA7373D8)
+[LOG] SoundI::release                          :     La_Vie_En_Rose (000002A79B4E1DD8)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4E4148 : node = 000002A7D3EEA760
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E4148
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3EEA870
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='My_Songs_Know_What_You_Did_In_The_Dark', format=5, channels=2, frequency=48000, lengthbytes=1552576, lengthpcm=7440509, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.537262.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E4148
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E1568
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E1568
+[LOG] SoundI::release                          : My_Songs_Know_What_You_Did_In_The_Dark (000002A79B4E4148)
+[LOG] SoundI::release                          :     My_Songs_Know_What_You_Did_In_The_Dark (000002A6DA7373D8)
+[LOG] SoundI::release                          :     My_Songs_Know_What_You_Did_In_The_Dark (000002A79B4E1568)
+[LOG] SystemI::createSound                     : filename = Assets/FMOD/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002A79B4DF8B8 : node = 000002A7D3EED460
+[LOG] SystemI::createSound                     : add node to async list : head = 000002A6DA71DB98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4DF8B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/FMOD/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7487616
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24928
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002A7D3EED570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Baby_Shark', format=5, channels=2, frequency=48000, lengthbytes=923264, lengthpcm=4211774, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.799347.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4DF8B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002A79B4E38D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002A79B4E38D8
+[LOG] SoundI::release                          : Baby_Shark (000002A79B4DF8B8)
+[LOG] SoundI::release                          :     Baby_Shark (000002A6DA737578)
+[LOG] SoundI::release                          :     Baby_Shark (000002A79B4E38D8)

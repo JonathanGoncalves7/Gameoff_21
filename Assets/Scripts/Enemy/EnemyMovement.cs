@@ -94,6 +94,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
+            agent.speed = GetSpeed();
+
             leftTimeNextPoint += Time.deltaTime;
 
             if (leftTimeNextPoint >= timeToNextPoint)

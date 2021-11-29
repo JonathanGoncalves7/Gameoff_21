@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead = false;
 
     private SanityController m_SanityController;
+    private PlayerMovement m_PlayerMovement;
 
     public static PlayerController Instance;
 
@@ -17,7 +18,9 @@ public class PlayerController : MonoBehaviour
     {
         inicitalPosition = transform.position;
         inicitalRotation = transform.rotation;
+
         m_SanityController = GetComponent<SanityController>();
+        m_PlayerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Awake()
@@ -29,17 +32,27 @@ public class PlayerController : MonoBehaviour
     {
         if (!isDead)
         {
+            StartCoroutine(LoadLevel.Instance.StartCrossFade());
+
             isDead = true;
+
             EyesManager.Instance.ChangeStateLeftAndRight(EyesManager.state.closed);
+
             TextPanel.Instance.ShowTextPanel("You died. It will be sent to safe rom!");
-
-            m_SanityController.Reset();
-
-            Respawn();
 
             EyesManager.Instance.ChangeStateLeftEye(EyesManager.state.opened);
             EyesManager.Instance.ChangeStateRightEye(EyesManager.state.opened);
             EyesManager.Instance.ChangeStateLeftAndRight(EyesManager.state.opened);
+
+            m_SanityController.Reset();
+            m_PlayerMovement.xRotation = 0;
+
+            Respawn();
+
+            m_PlayerMovement.playerStartGame = false;
+            isDead = false;
+
+            StartCoroutine(LoadLevel.Instance.EndCrossFade());
         }
     }
 
@@ -47,8 +60,5 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = inicitalPosition;
         transform.rotation = inicitalRotation;
-
-
-        isDead = false;
     }
 }

@@ -8,27 +8,22 @@ public class LoadLevel : MonoBehaviour
     Animator transition;
     public float transationTime = 1f;
 
-    // Start is called before the first frame update
+    public static LoadLevel Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
         transition = transform.GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     public void LoadLevelWithIndex(int levelIndex)
     {
         StartCoroutine(Load(levelIndex));
     }
-
-
-
 
     IEnumerator Load(int levelIndex)
     {
@@ -38,4 +33,20 @@ public class LoadLevel : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+
+    public IEnumerator StartCrossFade()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(5f);
+    }
+
+    public IEnumerator EndCrossFade()
+    {
+        transition.SetTrigger("End");
+
+        yield return new WaitForSeconds(5f);
+    }
+
+
 }
