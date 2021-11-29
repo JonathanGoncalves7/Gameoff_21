@@ -112,7 +112,6 @@ public class EyesManager : MonoBehaviour
 
         if (newState == state.closed)
         {
-
             ChangeStateLeftEye(state.closed);
             ChangeStateRightEye(state.closed);
         }

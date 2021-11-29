@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [Header("Speeds")]
     public float speedBase = 1f;
     public float speedToEachOpenEye = 3f;
+    public float maxSpeed = 30f;
 
     [Header("Patrol")]
     public bool patrol = true;
@@ -55,14 +56,20 @@ public class EnemyMovement : MonoBehaviour
             currentSpeed += EyesManager.Instance.RightEyeIsOpen() ? speedToEachOpenEye : 0;
         }
 
-        return currentSpeed;
+
+        if (!patrol)
+        {
+            currentSpeed *= Mathf.Max(SanityController.Instance.GetSecondsInFear(), 1);
+        }
+
+        return currentSpeed > maxSpeed ? maxSpeed : currentSpeed;
     }
 
     private void FollowPlayer()
     {
         agent.speed = GetSpeed();
 
-        if (Vector3.Distance(transform.position, player.transform.position) > 2f)
+        if (Vector3.Distance(transform.position, player.transform.position) > 0.5f)
         {
             agent.isStopped = false;
             agent.SetDestination(player.transform.position);
@@ -74,8 +81,17 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            PlayerController.Instance.Death();
+            patrol = true;
+        }
+    }
+
     void Patrol()
-    { 
+    {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
             leftTimeNextPoint += Time.deltaTime;
